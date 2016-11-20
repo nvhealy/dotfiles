@@ -1,6 +1,5 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
-syntax enable 
+filetype off                  " required 
 
 """"""""""""""""""""""""""""""""Vundle""""""""""""""""""""""""""""""""""""
 " set the runtime path to include Vundle and initialize
@@ -23,6 +22,7 @@ Plugin 'lervag/vimtex'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+syntax enable 
 
 """"""""""""""""""""""""""Non-Plugin stuff"""""""""""""""""""""""""""""""
 let g:default_julia_version = "0.5"
@@ -39,5 +39,14 @@ let g:lightline = {
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }
 
-"""""""""""""""""""""""""""""Vimtex"""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""Vimtex""""""""""""""""""""""""""""""""""""
+let g:tex_flavor = 'latex'
+autocmd Filetype tex inoremap  :fra \frac{}{}
+autocmd Filetype tex inoremap  :beg \begin{}
+autocmd Filetype tex inoremap  :bf \textbf{}<Space>(<>)<Esc>T{i
+
+""""""""""""""""""""""""""""New Commands""""""""""""""""""""""""""""""""Tex templates
+command TexTempBasic :r ~/.vim/templates/tex/texTempBasic.txt
+command TexTempPres :r ~/.vim/templates/tex/texTempPres.txt
+
 
