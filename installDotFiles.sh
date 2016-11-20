@@ -10,6 +10,8 @@ dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bashrc vimrc xmodmap"   # list of files/folders to symlink in homedir
 
+filetemplates=" *.txt"
+
 ##########
 
 # clone vundle
@@ -35,3 +37,11 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+# create template folder and move templates into it
+echo "Creating templates folders."
+mkdir ~/.vim/templates
+
+	echo "Copying templates to .vim/templates."
+ 	cp  $filetemplates ~/.vim/templates 
+	echo "...done"
