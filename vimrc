@@ -46,7 +46,7 @@ autocmd Filetype tex inoremap  :beg \begin{}
 autocmd Filetype tex inoremap  :bf \textbf{}<Space>(<>)<Esc>T{i
 
 """"""""""""""""""""""""""""New Commands""""""""""""""""""""""""""""""""Tex templates
-command TexTempBasic :r ~/.vim/templates/tex/texTempBasic.txt
-command TexTempPres :r ~/.vim/templates/tex/texTempPres.txt
+command TexTempBasic :r ~/.vim/templates/texTempBasic.txt
+command TexTempPres :r ~/.vim/templates/texTempPres.txt
 
 
