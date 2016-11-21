@@ -56,7 +56,7 @@ autocmd Filetype tex inoremap  :em \emph{}<Space><Esc>T{i
 
 "Lists/equations/table/figure
 autocmd Filetype tex inoremap  :enu \begin{enumerate}<Enter><Enter><Enter><Enter>\end{enumerate}<Space><Esc>2kA\item<Space>
-autocmd Filetype tex inoremap  :equ \begin{equation}<Enter><Enter><Enter><Enter>\end{equation}<Space><Esc>2kA
+autocmd Filetype tex inoremap  :equ \begin{equation}<Enter><Enter>\end{equation}<Space><Esc>kA
 autocmd Filetype tex inoremap  :ite \begin{itemize}<Enter><Enter><Enter><Enter>\end{itemize}<Space><Esc>2kA\item<Space>
 autocmd Filetype tex inoremap  :fig \begin{figure}[h]<Enter>\centering<Enter>\includegraphics[scale=1]{}<Enter>\caption{}<Enter>\end{figure}<Space><Esc>2kEi
 
