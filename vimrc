@@ -19,6 +19,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'lervag/vimtex'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,6 +40,20 @@ let g:lightline = {
       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }
+
+
+""""""""""""""""""""""""""""UltiSnips""""""""""""""""""""""""""""""""""
+
+" Trigger configuration. Do not use <tab> if you use
+" https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<s-x>"
+let g:UltiSnipsJumpForwardTrigger="<s-x>"
+let g:UltiSnipsJumpBackwardTrigger="<s-z>"
+"
+" " If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+
 
 """""""""""""""""""""""""""""Vimtex""""""""""""""""""""""""""""""""""""
 let g:tex_flavor = 'latex'
