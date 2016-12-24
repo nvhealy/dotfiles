@@ -123,3 +123,6 @@ export PATH="/home/noel/Software/julia-9c76c3e89a/bin:$PATH"
 # added for git
 export GIT_SSH=$(which ssh)
 
+
+# added by Anaconda3 4.2.0 installer
+export PATH="/home/noel/anaconda3/bin:$PATH"
