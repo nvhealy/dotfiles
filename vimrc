@@ -24,6 +24,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'easymotion/vim-easymotion'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -57,47 +58,6 @@ let g:UltiSnipsEditSplit="vertical"
 
 """""""""""""""""""""""""""""Vimtex""""""""""""""""""""""""""""""""""""
 let g:tex_flavor = 'latex'
-
-"Basic
-
-autocmd Filetype tex inoremap  :beg \begin{}<Enter><Enter>\end{}<Esc>3kEi
-autocmd Filetype tex inoremap  :sec \section{}<Space><Esc>T{i
-autocmd Filetype tex inoremap  :sub \subsection{}<Space><Esc>T{i
-autocmd Filetype tex inoremap  :ssu \subsubsection{}<Space><Esc>T{i
-
-"Font
-autocmd Filetype tex inoremap  :bf \textbf{}<Space><Esc>T{i
-autocmd Filetype tex inoremap  :it \textit{}<Space><Esc>T{i
-autocmd Filetype tex inoremap  :em \emph{}<Space><Esc>T{i
-
-"Maths
-autocmd Filetype tex inoremap  :fra \frac{}{}<Space><Esc>2T{i
-autocmd Filetype tex inoremap  :squ \sqrt[]{}<Space><Esc>T{i
-autocmd Filetype tex inoremap  :arr \begin{array}{c}<Enter><Enter>\end{array}<Space><Esc>kA
-
-
-"Lists/equations/table/figure
-autocmd Filetype tex inoremap  :enu \begin{enumerate}<Enter><Enter><Enter><Enter>\end{enumerate}<Space><Esc>2kA\item<Space>
-autocmd Filetype tex inoremap  :equ \begin{equation}<Enter><Enter><Enter><Enter>\end{equation}<Space><Esc>2kA
-autocmd Filetype tex inoremap  :ite \begin{itemize}<Enter><Enter><Enter><Enter>\end{itemize}<Space><Esc>2kA\item<Space>
-autocmd Filetype tex inoremap  :fig \begin{figure}[h]<Enter>\centering<Enter>\includegraphics[scale=1]{}<Enter>\caption{}<Enter>\end{figure}<Space><Esc>2kEi
-autocmd Filetype tex inoremap  :tab \begin{center}<Enter>\begin{tabular}{c c c}<Enter>\hline<Enter>cell1<Space>&<Space>cell2<Space>&<Space>cell3<Space>\\<Enter>cell4<Space>&<Space>cell5<Space>&<Space>cell6<Space>\\<Enter>\hline<Enter>\end{tabular}<Enter>\end{center}
-
-
-
-
-"Slides for Beamer
-"frame with figure
-autocmd Filetype tex inoremap  :ffig \begin{frame}<Enter>\frametitle{Using Columns}<Enter>\begin{columns}<Enter>\column{0.5\textwidth}<Enter><text><Enter>\column{0.5\textwidth}<Enter><text><Enter>\end{columns}<Enter>\end{frame}
-
-
-
-
-""""""""""""""""""""""""""""New Commands""""""""""""""""""""""""""""""""Tex templates
-command TexTempBasic :r ~/.vim/templates/texTempBasic.txt
-command TexTempPres :r ~/.vim/templates/texTempPres.txt
-
-
 " Python-mode
 " " Activate rope
 " " Keys:
