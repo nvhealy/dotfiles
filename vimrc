@@ -19,11 +19,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'lervag/vimtex'
 Plugin 'terryma/vim-multiple-cursors'
-<<<<<<< HEAD
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'suan/vim-instant-markdown'
-=======
 Plugin 'klen/python-mode'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -31,7 +26,7 @@ Plugin 'suan/vim-instant-markdown'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'easymotion/vim-easymotion'
 
->>>>>>> 331ab97b3985ffbf281528e2612352e09bcf23a7
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -52,20 +47,6 @@ let g:lightline = {
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }
 
-<<<<<<< HEAD
-
-""""""""""""""""""""""""""""UltiSnips""""""""""""""""""""""""""""""""""
-
-" Trigger configuration. Do not use <tab> if you use
-" https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<s-x>"
-let g:UltiSnipsJumpForwardTrigger="<s-x>"
-let g:UltiSnipsJumpBackwardTrigger="<s-z>"
-"
-" " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-
-
 
 """""""""""""""""""""""""""""Vimtex""""""""""""""""""""""""""""""""""""
 let g:tex_flavor = 'pdf'
@@ -81,17 +62,6 @@ autocmd Filetype tex inoremap  :ssu \subsubsection{}<Space><Esc>T{i
 
 "Font
 autocmd Filetype tex inoremap  :bf \textbf{}<Space><Esc>T{i
-autocmd Filetype tex inoremap  :it \textit{}<Space><Esc>T{i
-autocmd Filetype tex inoremap  :em \emph{}<Space><Esc>T{i
-
-"Lists/equations/table/figure
-autocmd Filetype tex inoremap  :enu \begin{enumerate}<Enter><Enter><Enter><Enter>\end{enumerate}<Space><Esc>2kA\item<Space>
-autocmd Filetype tex inoremap  :equ \begin{equation}<Enter><Enter>\end{equation}<Space><Esc>kA
-autocmd Filetype tex inoremap  :ite \begin{itemize}<Enter><Enter><Enter><Enter>\end{itemize}<Space><Esc>2kA\item<Space>
-autocmd Filetype tex inoremap  :fig \begin{figure}[h]<Enter>\centering<Enter>\includegraphics[scale=1]{}<Enter>\caption{}<Enter>\end{figure}<Space><Esc>2kEi
-=======
-""""""""""""""""""""""""""""UltiSnips""""""""""""""""""""""""""""""""""
->>>>>>> 331ab97b3985ffbf281528e2612352e09bcf23a7
 
 let g:UltiSnipsExpandTrigger="<s-x>"
 let g:UltiSnipsJumpForwardTrigger="<s-x>"
@@ -100,9 +70,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-z>"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-
-"""""""""""""""""""""""""""""Vimtex""""""""""""""""""""""""""""""""""""
-let g:tex_flavor = 'latex'
 " Python-mode
 " " Activate rope
 " " Keys:
