@@ -19,9 +19,19 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'itchyny/lightline.vim'
 Plugin 'lervag/vimtex'
 Plugin 'terryma/vim-multiple-cursors'
+<<<<<<< HEAD
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'suan/vim-instant-markdown'
+=======
+Plugin 'klen/python-mode'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'easymotion/vim-easymotion'
+
+>>>>>>> 331ab97b3985ffbf281528e2612352e09bcf23a7
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -42,6 +52,7 @@ let g:lightline = {
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }
 
+<<<<<<< HEAD
 
 """"""""""""""""""""""""""""UltiSnips""""""""""""""""""""""""""""""""""
 
@@ -78,16 +89,71 @@ autocmd Filetype tex inoremap  :enu \begin{enumerate}<Enter><Enter><Enter><Enter
 autocmd Filetype tex inoremap  :equ \begin{equation}<Enter><Enter>\end{equation}<Space><Esc>kA
 autocmd Filetype tex inoremap  :ite \begin{itemize}<Enter><Enter><Enter><Enter>\end{itemize}<Space><Esc>2kA\item<Space>
 autocmd Filetype tex inoremap  :fig \begin{figure}[h]<Enter>\centering<Enter>\includegraphics[scale=1]{}<Enter>\caption{}<Enter>\end{figure}<Space><Esc>2kEi
+=======
+""""""""""""""""""""""""""""UltiSnips""""""""""""""""""""""""""""""""""
+>>>>>>> 331ab97b3985ffbf281528e2612352e09bcf23a7
+
+let g:UltiSnipsExpandTrigger="<s-x>"
+let g:UltiSnipsJumpForwardTrigger="<s-x>"
+let g:UltiSnipsJumpBackwardTrigger="<s-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 
+"""""""""""""""""""""""""""""Vimtex""""""""""""""""""""""""""""""""""""
+let g:tex_flavor = 'latex'
+" Python-mode
+" " Activate rope
+" " Keys:
+" " K             Show python docs
+" " <Ctrl-Space>  Rope autocomplete
+" " <Ctrl-c>g     Rope goto definition
+" " <Ctrl-c>d     Rope show documentation
+" " <Ctrl-c>f     Rope find occurrences
+" " <Leader>b     Set, unset breakpoint (g:pymode_breakpoint enabled)
+" " [[            Jump on previous class or function (normal, visual, operator
+" modes)
+" " ]]            Jump on next class or function (normal, visual, operator
+" modes)
+" " [M            Jump on previous class or method (normal, visual, operator
+" modes)
+" " ]M            Jump on next class or method (normal, visual, operator
+" modes)
+let g:pymode_rope = 0
+"
+" " Documentation
+let g:pymode_doc = 1
+let g:pymode_doc_key = 'K'
+"
+" "Linting
+let g:pymode_lint = 1
+" 
+"
+let g:pymode_lint_checker = "pyflakes,pep8"
+" " Auto check on save
+let g:pymode_lint_write = 1
+"
+" " Support virtualenv
+let g:pymode_virtualenv = 1
+"
+" " Enable breakpoints plugin
+let g:pymode_breakpoint = 1
+let g:pymode_breakpoint_bind = '<leader>b'
+"
+" " syntax highlighting
+let g:pymode_syntax = 1
+let g:pymode_syntax_all = 1
+let g:pymode_syntax_indent_errors = g:pymode_syntax_all
+let g:pymode_syntax_space_errors = g:pymode_syntax_all
+"
+" " Don't autofold code
+let g:pymode_folding = 0
 
-
-
-
-
-
-""""""""""""""""""""""""""""New Commands""""""""""""""""""""""""""""""""Tex templates
-command TexTempBasic :r ~/.vim/templates/texTempBasic.txt
-command TexTempPres :r ~/.vim/templates/texTempPres.txt
+"""""""""""""""""""""remaps""""""""""""""""""""""""""""""
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 
