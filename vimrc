@@ -21,6 +21,7 @@ Plugin 'lervag/vimtex'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'suan/vim-instant-markdown'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,7 +57,9 @@ let g:UltiSnipsEditSplit="vertical"
 
 
 """""""""""""""""""""""""""""Vimtex""""""""""""""""""""""""""""""""""""
-let g:tex_flavor = 'latex'
+let g:tex_flavor = 'pdf'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_MultipleCompileFormats='pdf,bibtex,pdf'
 
 "Basic
 autocmd Filetype tex inoremap  :fra \frac{}{}<Space><Esc>2T{i
